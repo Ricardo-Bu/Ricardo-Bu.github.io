@@ -1,0 +1,5 @@
+figure.highlight td:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 1;
+}
