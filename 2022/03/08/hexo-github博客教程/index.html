@@ -24,7 +24,7 @@
 <meta property="og:description" content="hexo+github博客安装一、 准备安装工具Node.js下载地址：https:&#x2F;&#x2F;nodejs.org&#x2F;zh-cn&#x2F; 安装教程：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;zhouyu2017&#x2F;p&#x2F;6485265.html Git下载地址：https:&#x2F;&#x2F;git-scm.com 安装教程：https:&#x2F;&#x2F;www.cnblogs.com&#x2F;xueweisuoyong&#x2F;p&#x2F;11914045.h">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-03-08T12:43:57.000Z">
-<meta property="article:modified_time" content="2022-03-08T12:45:34.891Z">
+<meta property="article:modified_time" content="2022-03-10T02:59:00.421Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="教程">
 <meta name="twitter:card" content="summary_large_image">
@@ -295,12 +295,12 @@
 <h2 id="二、搭建GitHub仓库"><a href="#二、搭建GitHub仓库" class="headerlink" title="二、搭建GitHub仓库"></a>二、搭建GitHub仓库</h2><h3 id="注册GitHub账号"><a href="#注册GitHub账号" class="headerlink" title="注册GitHub账号"></a>注册GitHub账号</h3><p>GitHub账号注册教程：<a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv5107169">https://www.bilibili.com/read/cv5107169</a></p>
 <h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><p><code>Repository name</code>：“GitHub用户名“+.github.io</p>
 <p>选择<code>Public</code>勾选<code>Add a README file</code>点击<code>Create repository</code></p>
-<p><strong><u>博客地址即为：“用户名“+.github.io</u></strong></p>
+<p><strong>博客地址即为：“用户名“+.github.io</strong></p>
 <h2 id="三、-生成SSH-Keys"><a href="#三、-生成SSH-Keys" class="headerlink" title="三、 生成SSH Keys"></a>三、 生成SSH Keys</h2><p>打开任意一个文件夹点击鼠标右键选择<code>Git Bash Here</code>输入命令<code>SSH</code></p>
 <p>检查电脑是否安装<code>SSH</code></p>
 <p>输入命令<code>ssh-keygen -t rsa -C &quot;邮箱地址&quot;</code></p>
 <p>点击<code>Enter</code>键4次</p>
-<p>此时会在<u>C盘【C:\Users\用户名（每个人不一样）.ssh】生成.pub文件</u></p>
+<p>此时会在<strong>C盘【C:\Users\用户名（每个人不一样）.ssh】生成.pub文件</strong></p>
 <p>打开该文件复制其中所有内容</p>
 <p>打开<code>GitHub</code>点击用户头像点击<code>Sittings</code>进入页面左侧有<code>SSH and GPG keys</code>点击进入<code>New SSH key</code>将该复制的<code>.pub</code>内的所有内容粘贴进入。</p>
 <p>返回前一步骤的<code>Git Bash Here</code>命令行输入</p>
@@ -312,18 +312,10 @@
 </blockquote>
 <p>则生成SSH Keys已经成功！</p>
 <h2 id="四、-生成本地博客内容"><a href="#四、-生成本地博客内容" class="headerlink" title="四、 生成本地博客内容"></a>四、 生成本地博客内容</h2><p>在喜欢的盘中新建一个文件夹，打开之后右键点击<code>Git bash here</code></p>
-<ul>
-<li><input disabled="" type="checkbox"> 输入命令<code>hexo init</code></li>
-</ul>
+<p>输入命令<code>hexo init</code></p>
 <p>等待，直到输出<code>Start blogging with Hexo!</code></p>
-<ul>
-<li><p><input disabled="" type="checkbox"> 
-输入命令<code>Hexo g</code> </p>
-</li>
-<li><p><input disabled="" type="checkbox"> 
-输入命令<code>Hexo s</code></p>
-</li>
-</ul>
+<p>输入命令<code>Hexo g</code> </p>
+<p>输入命令<code>Hexo s</code></p>
 <h2 id="五、生成网络博客内容"><a href="#五、生成网络博客内容" class="headerlink" title="五、生成网络博客内容"></a>五、生成网络博客内容</h2><p>打开_config.yml文件，配置文件修改</p>
 <blockquote>
 <p>deploy:<br>type: git<br>repository: <a target="_blank" rel="noopener" href="https://github.com/%E4%BD%A0%E7%9A%84%E5%90%8D%E5%AD%97/%E4%BB%93%E5%BA%93%E7%9A%84%E5%90%8D%E5%AD%97.git">https://github.com/你的名字/仓库的名字.git</a><br>branch: main</p>
@@ -358,10 +350,9 @@
 <p>hexo d</p>
 </blockquote>
 <p>应该就不会出错了！如果hexo d 之后不动，直接按ctl+c终止，之后再hexo d 就会开始上传！</p>
-<p>六、美化</p>
-<p>使用css&#x2F;js引入的方法</p>
+<h2 id="六、美化"><a href="#六、美化" class="headerlink" title="六、美化"></a>六、美化</h2><p>使用css&#x2F;js引入的方法</p>
 <p>在<strong>themes\fluid\source\css\文件夹下</strong>新建一个文本文档，找到一段可用的css美化代码，复制粘贴的新建的文档里面，然后把文档的**.txt<strong>修改成</strong>.css&#x2F;.js**，命好名字。</p>
-<p>然后打开<strong>主题配置</strong>文件**&#x2F;themes&#x2F;fluid&#x2F;_config.yml**找到<u><strong>“custom_js”</strong></u>和<u><strong>“custom_js”</strong></u>下面进行引入。</p>
+<p>然后打开<strong>主题配置</strong>文件**&#x2F;themes&#x2F;fluid&#x2F;_config.yml<strong>找到</strong>“custom_js”<strong>和</strong>“custom_js”**下面进行引入。</p>
 
               
             </div>
